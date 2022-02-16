@@ -1,5 +1,5 @@
-#ifndef __VIM_WIDGETS_WIDGET_H__
-#define __VIM_WIDGETS_WIDGET_H__
+#ifndef __VIM_WIDGETS_WIDGET_HPP__
+#define __VIM_WIDGETS_WIDGET_HPP__
 
 namespace Vim::Widgets {
 
