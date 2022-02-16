@@ -1,5 +1,5 @@
-#ifndef __VIM_MODEL_TEXTINPUT_H__
-#define __VIM_MODEL_TEXTINPUT_H__
+#ifndef __VIM_MODEL_TEXTINPUT_HPP__
+#define __VIM_MODEL_TEXTINPUT_HPP__
 
 #include <stdint.h>
 #include <string>
