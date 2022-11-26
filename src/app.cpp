@@ -36,7 +36,7 @@ App::~App()
     endwin();
 }
 
-void App::set_config(YAML::Node yaml_config) {
+void App::set_config(const YAML::Node &yaml_config) {
     config = new Config(yaml_config);
 }
 

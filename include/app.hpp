@@ -19,7 +19,7 @@ class App {
         App(Commands::Handler *commands_handler);
         ~App();
 
-        void set_config(YAML::Node yaml_config);
+        void set_config(const YAML::Node &yaml_config);
         
         void wait_and_handle_input();
 
