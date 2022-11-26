@@ -2,8 +2,7 @@
 #define __VIM_APP_HPP__
 
 #include <string>
-
-namespace YAML { class Node; }
+#include <yaml-cpp/yaml.h>
 
 namespace Vim {
 
@@ -16,10 +15,8 @@ namespace Widgets { class Command; }
 class App {
 
     public:
-        App(Commands::Handler *commands_handler);
+        App(Commands::Handler *commands_handler, const YAML::Node &yaml_config);
         ~App();
-
-        void set_config(const YAML::Node &yaml_config);
         
         void wait_and_handle_input();
 

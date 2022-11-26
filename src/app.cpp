@@ -1,6 +1,5 @@
 #include "app.hpp"
 #include <stdlib.h>
-#include <yaml-cpp/yaml.h>
 #include "widgets/command.hpp"
 #include "input_handler.hpp"
 #include "commands/handler.hpp"
@@ -9,9 +8,11 @@
 
 namespace Vim {
 
-App::App(Commands::Handler *_commands_handler)
+App::App(Commands::Handler *_commands_handler, const YAML::Node &yaml_config)
     : commands_handler(_commands_handler), should_quit(false)
 {
+    config = new Config(yaml_config);
+
     // ncurses init
     initscr();
 
@@ -34,10 +35,6 @@ App::~App()
 
     // ncurses closing
     endwin();
-}
-
-void App::set_config(const YAML::Node &yaml_config) {
-    config = new Config(yaml_config);
 }
 
 void App::pause()
